@@ -1,0 +1,16 @@
+// Place all the styles related to the animals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container{
+ background-color: rgb(250, 250, 250);
+}
+
+.card{
+  background-color: beige;
+  justify-self: center;
+  justify-content: center;
+  margin: 8px;
+  padding: 4px;
+  max-width: 200px;
+ border-radius: 8px; 
+}

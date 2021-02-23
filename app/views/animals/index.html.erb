@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>This should be my animal listing page </h1>
+
+  <p> click card for more info or to edit </p>
+
+  <div class = "cards">
+    <% @animals.each do |animal| %>
+      
+      <div class="card">
+        <p> Name: <%=  animal.name  %>     </p>
+        <p> Species: <%=  animal.species %>   </p>
+        <p> Owner:  <%= animal.owner  %>     </p>
+      </div>
+
+    <% end %>
+  </div>
+</div>
