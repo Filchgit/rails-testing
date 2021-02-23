@@ -12,6 +12,19 @@ before_action :set_animal, only: [:show, :destroy]
     @animal.destroy
     redirect_to animals_url
   end
+  
+  def new
+    @animal = Animal.new
+  end
+
+   def create
+    @animal = Animal.new(animal_params)
+    if @animal.save
+      redirect_to animal_path(@animal)
+    else
+      render 'new'
+    end
+   end
 
 
   private
