@@ -1,5 +1,5 @@
 class AnimalsController < ApplicationController
-before_action :set_animal, only: [:show, :destroy]
+before_action :set_animal, only: [:show, :destroy, :edit, :update]
 
   def index
     @animals = Animal.all
@@ -17,6 +17,7 @@ before_action :set_animal, only: [:show, :destroy]
     @animal = Animal.new
   end
 
+
    def create
     @animal = Animal.new(animal_params)
     if @animal.save
@@ -26,6 +27,16 @@ before_action :set_animal, only: [:show, :destroy]
     end
    end
 
+   def update
+    if @animal.update(animal_params)
+      redirect_to animal_path(@animal)
+    else
+      render 'edit'
+    end
+  end
+
+   def edit
+   end
 
   private
 

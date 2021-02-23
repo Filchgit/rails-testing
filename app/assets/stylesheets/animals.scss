@@ -29,10 +29,15 @@ a{
   padding: 8px;
   width:fit-content;
   border-radius: 4px;
+  box-shadow: darkgrey 4px 4px 4px;
 }
 .danger{
   background-color: crimson;
 }
 .prim{
   background-color: darkgreen;
+}
+
+.edit{
+  background-color: rgb(47, 55, 177);
 }

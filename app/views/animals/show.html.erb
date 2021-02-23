@@ -2,15 +2,21 @@
 
 <h4> <%= @animal.name %> <%= @animal.species %> </h4>
 
+<%= link_to edit_animal_path do %>
+  <div class="button edit">
+    Edit this animal.
+  </div> 
+<% end %>
+
+
+<%= link_to animals_path do %>
+  <div class="button prim">
+    See all the animals!
+  </div> 
+<% end %>
 
 <%= link_to delete_animal_path(@animal), method: "delete" do %>
   <div class="button danger">
     Delete
   </div>
-<% end %>
-
-<%= link_to animals_path do %>
-  <div class="button prim">
-    All the Animals!
-  </div> 
 <% end %>
